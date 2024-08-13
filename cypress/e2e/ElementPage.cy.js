@@ -4,7 +4,7 @@ import { ElementsPageElements } from '../support/pageObjects/elements/ElementsPa
 import Logger from '../utils/Logger';
 
 
-describe("Home Page tests", () => {
+describe("Elements Page tests", () => {
     const logger = new Logger();
 
     before(() => {
@@ -40,11 +40,30 @@ describe("Home Page tests", () => {
         });
     })
 
-    it.skip('Test 2 -> CheckBoxes', () => {
+    it.only('Test 2 -> CheckBoxes', () => {
+        logger.log("Access the demoqa website", "Step")
         HomePage.visit();
+
+        logger.log("Go to the Checkbox section", "Step")
         HomePage.goToElementsPage();
         ElementsPage.goToCheckBoxSection();
+
+        //Check Home checkbox
+        logger.log("Check Home checkbox", "Step")
         ElementsPage.checkAllCheckBoxes();
+
+        logger.log("Verify the result", "Verification")
+        ElementsPageElements.checkBoxElements.resultBox().then(($el) => {
+            const textResult = $el.text().replace(/\s+/g, ' ').trim();
+            expect(textResult).to.include("You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile")
+          });
+
+          logger.log("Uncheck Home checkbox", "Step")
+          ElementsPage.checkAllCheckBoxes();
+          logger.log("Verify text result doesnt exist", "Verification")
+          ElementsPageElements.checkBoxElements.resultBox().should('not.exist')
+        
+        
 
     })
 
