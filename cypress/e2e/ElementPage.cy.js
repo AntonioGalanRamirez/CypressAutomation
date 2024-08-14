@@ -9,19 +9,24 @@ describe("Elements Page tests", () => {
 
     before(() => {
         cy.intercept({ resourceType: /xhr|fetch/ }, { log: false })
+        cy.clearCookies();
+        cy.clearLocalStorage();
+        cy.clearAllSessionStorage();
+    });
+
+    beforeEach(() => {
+        logger.log("Access the demoqa website", "Step")
+        HomePage.visit();
     });
 
     it("Test 1 -> TextBox Form", () => {
-        logger.log("Access the demoqa website", "Step")
-        HomePage.visit();
-
         logger.log("Go to the Elements section and then to the Text Box section", "Step")
         HomePage.goToElementsPage();
         ElementsPage.goToTextBoxSection();
 
         logger.log("Fills in the fields of the TextBox form", "Step")
         ElementsPage.fillTextBoxForm();
-        
+
         logger.log("Verifies the result returned by the form", "Verification")
         ElementsPageElements.outputField.name().then((nameText) => {
             expect(nameText).to.include('Name:Antonio');
@@ -41,28 +46,44 @@ describe("Elements Page tests", () => {
     })
 
     it.only('Test 2 -> CheckBoxes', () => {
-        logger.log("Access the demoqa website", "Step")
-        HomePage.visit();
-
         logger.log("Go to the Checkbox section", "Step")
         HomePage.goToElementsPage();
         ElementsPage.goToCheckBoxSection();
 
         //Check Home checkbox
         logger.log("Check Home checkbox", "Step")
-        ElementsPage.checkAllCheckBoxes();
+        ElementsPage.checkHomeCheckbox();
 
         logger.log("Verify the result", "Verification")
-        ElementsPageElements.checkBoxElements.resultBox().then(($el) => {
-            const textResult = $el.text().replace(/\s+/g, ' ').trim();
-            expect(textResult).to.include("You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile")
-          });
+        ElementsPage.verifyResultTextAllCheckboxes()
 
-          logger.log("Uncheck Home checkbox", "Step")
-          ElementsPage.checkAllCheckBoxes();
-          logger.log("Verify text result doesnt exist", "Verification")
-          ElementsPageElements.checkBoxElements.resultBox().should('not.exist')
-        
+        //Uncheck Home checkbox
+        logger.log("Uncheck Home checkbox", "Step")
+        ElementsPage.checkHomeCheckbox();
+        logger.log("Verify text result doesnt exist", "Verification")
+        ElementsPageElements.checkBoxElements.resultBox().should('not.exist')
+
+        //Expand Home checkbox options and select them individually
+        logger.log("Expand the checkbox options", "Step")
+        ElementsPage.expandOptions()
+
+        //Selecting all individually
+        logger.log("Select all checkboxes individually", "Step")
+        ElementsPage.checkDesktopCheckbox()
+        ElementsPage.checkDocumentsCheckbox()
+        ElementsPage.checkDownloadsCheckbox()
+
+        logger.log("Verify the result", "Verification")
+        ElementsPage.verifyResultTextAllCheckboxes()
+
+
+        //Selecting only Desktop checkbox
+        logger.log("Clear checkboxes", "Step")
+        ElementsPage.checkHomeCheckbox();
+        logger.log("Select only desktop checkbox", "Step")
+        ElementsPage.checkDesktopCheckbox()
+        logger.log("Verify the result", "Verification")
+        ElementsPage.verifyResultTextDesktopCheckbox()
         
 
     })
