@@ -4,6 +4,7 @@ import { ElementsPageElements } from '../support/pageObjects/elements/ElementsPa
 import Logger from '../utils/Logger';
 
 
+
 describe("Elements Page tests", () => {
     const logger = new Logger();
 
@@ -45,7 +46,7 @@ describe("Elements Page tests", () => {
         });
     })
 
-    it.only('Test 2 -> CheckBoxes', () => {
+    it('Test 2 -> CheckBoxes', () => {
         logger.log("Go to the Checkbox section", "Step")
         HomePage.goToElementsPage();
         ElementsPage.goToCheckBoxSection();
