@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open"
+    "cy:open": "cypress open",
+    "cypress:chrome": "cypress run --browser chrome && open-cli cypress/reports/mochawesome.html"
   },
   "author": "Antonio",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.14.0"
+    "cypress": "^13.13.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
-    "@shelex/cypress-allure-plugin": "^2.40.2"
+    "open": "^10.1.0"
   }
 }

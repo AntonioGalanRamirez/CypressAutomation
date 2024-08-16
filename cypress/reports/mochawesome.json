@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-16T09:14:12.364Z",
+    "end": "2024-08-16T09:14:19.422Z",
+    "duration": 7058,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2a481e8e-977b-447f-a197-de73b87e932e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ElementPage.cy.js",
+      "file": "cypress\\e2e\\ElementPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9a98a0d0-d505-49a8-aaad-a020ed087b4b",
+          "title": "Elements Section tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test 1 -> TextBox Form",
+              "fullTitle": "Elements Section tests Test 1 -> TextBox Form",
+              "timedOut": null,
+              "duration": 3822,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "logger.log(\"Go to the Elements section and then to the Text Box section\", \"Step\");\n_HomePage.HomePage.goToElementsPage();\n_ElementsPage.ElementsPage.goToTextBoxSection();\nlogger.log(\"Fills in the fields of the TextBox form\", \"Step\");\n_ElementsPage.ElementsPage.fillTextBoxForm();\nlogger.log(\"Verifies the result returned by the form\", \"Verification\");\n_ElementsPageElements.ElementsPageElements.outputField.name().then(nameText => {\n  expect(nameText).to.include('Name:Antonio');\n});\n_ElementsPageElements.ElementsPageElements.outputField.email().then(emailText => {\n  expect(emailText).to.include('Email:antoniogalan1907@gmail.com');\n});\n_ElementsPageElements.ElementsPageElements.outputField.currentAddress().then(currentAddressText => {\n  expect(currentAddressText).to.include('Current Address :Calle de Garganchon 112');\n});\n_ElementsPageElements.ElementsPageElements.outputField.permanentAddress().then(permanentAddressText => {\n  expect(permanentAddressText).to.include('Permananet Address :Calle de Garganchon 112');\n});",
+              "err": {},
+              "uuid": "c93176bc-e22b-4d5a-a461-45c92154e302",
+              "parentUUID": "9a98a0d0-d505-49a8-aaad-a020ed087b4b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test 2 -> CheckBoxes",
+              "fullTitle": "Elements Section tests Test 2 -> CheckBoxes",
+              "timedOut": null,
+              "duration": 1861,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "logger.log(\"Go to the Checkbox section\", \"Step\");\n_HomePage.HomePage.goToElementsPage();\n_ElementsPage.ElementsPage.goToCheckBoxSection();\n//Check Home checkbox\nlogger.log(\"Check Home checkbox\", \"Step\");\n_ElementsPage.ElementsPage.checkHomeCheckbox();\nlogger.log(\"Verify the result\", \"Verification\");\n_ElementsPage.ElementsPage.verifyResultTextAllCheckboxes();\n//Uncheck Home checkbox\nlogger.log(\"Uncheck Home checkbox\", \"Step\");\n_ElementsPage.ElementsPage.checkHomeCheckbox();\nlogger.log(\"Verify text result doesnt exist\", \"Verification\");\n_ElementsPageElements.ElementsPageElements.checkBoxElements.resultBox().should('not.exist');\n//Expand Home checkbox options and select them individually\nlogger.log(\"Expand the checkbox options\", \"Step\");\n_ElementsPage.ElementsPage.expandOptions();\n//Selecting all individually\nlogger.log(\"Select all checkboxes individually\", \"Step\");\n_ElementsPage.ElementsPage.checkDesktopCheckbox();\n_ElementsPage.ElementsPage.checkDocumentsCheckbox();\n_ElementsPage.ElementsPage.checkDownloadsCheckbox();\nlogger.log(\"Verify the result\", \"Verification\");\n_ElementsPage.ElementsPage.verifyResultTextAllCheckboxes();\n//Selecting only Desktop checkbox\nlogger.log(\"Clear checkboxes\", \"Step\");\n_ElementsPage.ElementsPage.checkHomeCheckbox();\nlogger.log(\"Select only desktop checkbox\", \"Step\");\n_ElementsPage.ElementsPage.checkDesktopCheckbox();\nlogger.log(\"Verify the result\", \"Verification\");\n_ElementsPage.ElementsPage.verifyResultTextDesktopCheckbox();",
+              "err": {},
+              "uuid": "72aa7c41-7c26-413c-bbac-ced8baf02520",
+              "parentUUID": "9a98a0d0-d505-49a8-aaad-a020ed087b4b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c93176bc-e22b-4d5a-a461-45c92154e302",
+            "72aa7c41-7c26-413c-bbac-ced8baf02520"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5683,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

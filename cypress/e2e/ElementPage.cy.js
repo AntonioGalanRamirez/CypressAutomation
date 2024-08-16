@@ -5,7 +5,8 @@ import Logger from '../utils/Logger';
 
 
 
-describe("Elements Page tests", () => {
+
+describe("Elements Section tests", () => {
     const logger = new Logger();
 
     before(() => {
