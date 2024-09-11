@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2484","Test 2 -> Checkboxes","","Tue Sep 10 11:42:00 CEST 2024","passed","Tue Sep 10 11:42:03 CEST 2024","","Elements Section tests","Elements Section tests","Test 2 -> Checkboxes"
+"","11364","Test 3 -> Web tables (creating, editing and deleting)","","Tue Sep 10 11:42:03 CEST 2024","failed","Tue Sep 10 11:42:14 CEST 2024","","Elements Section tests","Elements Section tests","Test 3 -> Web tables (creating, editing and deleting)"
+"","3000","Test 1 -> Textbox Form","","Tue Sep 10 11:41:57 CEST 2024","passed","Tue Sep 10 11:42:00 CEST 2024","","Elements Section tests","Elements Section tests","Test 1 -> Textbox Form"

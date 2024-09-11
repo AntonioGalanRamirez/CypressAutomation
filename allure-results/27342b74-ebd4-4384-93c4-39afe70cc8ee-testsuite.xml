@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1725961253519' stop='1725961269481'>
+    <name>Elements Section tests</name>
+    <title>Elements Section tests</title>
+    <test-cases>
+        <test-case start='1725961256471' status='passed' stop='1725961259470'>
+            <name>Test 1 -> Textbox Form</name>
+            <title>Test 1 -> Textbox Form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1725961259487' status='passed' stop='1725961261997'>
+            <name>Test 2 -> Checkboxes</name>
+            <title>Test 2 -> Checkboxes</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1725961262017' status='passed' stop='1725961269481'>
+            <name>Test 3 -> Web tables (creating, editing and deleting)</name>
+            <title>Test 3 -> Web tables (creating, editing and deleting)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -13,8 +13,19 @@ export default [
   },
   pluginJs.configs.recommended,
   {
-    "plugins": {
-        "cypress": cypressPlugin
-    }
+    plugins: {
+      cypress: cypressPlugin
+    },
+    rules: {
+      "cypress/no-unnecessary-waiting": "off"
+    },
+    env: {
+      "cypress/globals": true
+    },
+    extends: [
+      "plugin:cypress/recommended"
+    ]
   }
 ];
+
+

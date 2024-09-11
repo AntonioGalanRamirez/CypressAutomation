@@ -8,9 +8,9 @@ class TextboxPage {
     //Actions methods
     static fillTextBoxForm() {
         TextboxFormElements.textBoxFormElements.usernameField().type('Antonio')
-        TextboxFormElements.textBoxFormElements.emailField().type('antoniogalan1907@gmail.com')
-        TextboxFormElements.textBoxFormElements.currentAddressField().type('Calle de Garganchon 112')
-        TextboxFormElements.textBoxFormElements.permanentAddressField().type('Calle de Garganchon 112')
+        TextboxFormElements.textBoxFormElements.emailField().type('testcypress@test.com')
+        TextboxFormElements.textBoxFormElements.currentAddressField().type('Calle Test Cypress')
+        TextboxFormElements.textBoxFormElements.permanentAddressField().type('Calle Test Cypress ')
         TextboxFormElements.textBoxFormElements.submitButton().click()
     }
 

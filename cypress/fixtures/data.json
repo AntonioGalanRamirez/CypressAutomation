@@ -1,0 +1,27 @@
+{
+  "textboxData": {
+    "name": "Antonio",
+    "email": "testcypress@test.com",
+    "currentAddress": "Calle Test Cypress",
+    "permanentAddress": "Calle Test Cypress"
+  },
+  "webtablesData": {
+    "newRecord": {
+      "firstName": "Antonio",
+      "lastName": "Galán",
+      "email": "testcypress@test.com",
+      "age": "30",
+      "salary": "30000",
+      "department": "QA"
+    },
+    "editedRecord": {
+      "firstName": "Test Name Edition",
+      "lastName": "Test Last Name Edition",
+      "email": "testedition@gmail.com",
+      "age": "31",
+      "salary": "31000",
+      "department": "Test department edition"
+    }
+  }
+}
+

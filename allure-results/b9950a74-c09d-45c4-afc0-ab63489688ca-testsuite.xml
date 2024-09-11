@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1725961315080' stop='1725961334855'>
+    <name>Elements Section tests</name>
+    <title>Elements Section tests</title>
+    <test-cases>
+        <test-case start='1725961317947' status='passed' stop='1725961320947'>
+            <name>Test 1 -> Textbox Form</name>
+            <title>Test 1 -> Textbox Form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1725961320963' status='passed' stop='1725961323447'>
+            <name>Test 2 -> Checkboxes</name>
+            <title>Test 2 -> Checkboxes</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1725961323463' status='failed' stop='1725961334827'>
+            <name>Test 3 -> Web tables (creating, editing and deleting)</name>
+            <title>Test 3 -> Web tables (creating, editing and deleting)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '&lt;div.rt-td>' to have text 'Test department editionn', but the text was 'Test department edition'</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '&lt;div.rt-td>' to have text 'Test department editionn', but the text was 'Test department edition'
+                    at Context.eval (webpack://cypresscurso/./cypress/support/pageObjects/pages/WebtablesPage.js:73:68)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
